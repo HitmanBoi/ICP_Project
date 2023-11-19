@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BS_supply_mgmt_backend": {
+      "main": "src/BS_supply_mgmt_backend/main.mo",
+      "type": "motoko"
+    },
+    "BS_supply_mgmt_frontend": {
+      "dependencies": [
+        "BS_supply_mgmt_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BS_supply_mgmt_frontend/src/index.html"
+      },
+      "source": [
+        "src/BS_supply_mgmt_frontend/assets",
+        "dist/BS_supply_mgmt_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
